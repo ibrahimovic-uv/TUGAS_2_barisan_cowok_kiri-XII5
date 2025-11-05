@@ -103,7 +103,7 @@ nav ul li a:hover {
 /* --- HERO SECTION (LATAR BELAKANG FOTO) --- */
 .hero-section {
     /* MENGGUNAKAN FOTO PERTAMA SEBAGAI LATAR */
-    background: url('IMG_20251105_112559.jpg') no-repeat center center/cover; 
+    background: url('IMG_20251105_112543.jpg') no-repeat center center/cover; 
     height: 70vh;
     display: flex;
     align-items: center;
