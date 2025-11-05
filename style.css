@@ -1,54 +1,64 @@
 /* Pengaturan Umum dan Reset */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #f8f8f0; /* Warna dasar off-white/krem */
 }
 
 .container {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     max-width: 1200px;
     padding: 20px 0;
 }
 
+/* Warna Utama Tema Alam */
+:root {
+    --color-primary: #38761d; /* Hijau Tua/Hutan */
+    --color-secondary: #6aa84f; /* Hijau Sedang/Daun */
+    --color-accent: #f1c232; /* Kuning/Matahari */
+    --color-bg-section: #e8f5e9; /* Light Mint Green */
+}
+
 /* Tombol CTA (Call to Action) */
 .cta-button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF; /* Biru Primer */
+    padding: 12px 25px;
+    background-color: var(--color-primary); 
     color: white !important;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 50px; 
+    transition: background-color 0.3s ease, transform 0.2s;
     font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .cta-button:hover {
-    background-color: #0056b3;
+    background-color: #274e13;
+    transform: translateY(-2px);
 }
 
 .large-cta {
-    padding: 15px 30px;
-    font-size: 1.1em;
+    padding: 18px 35px;
+    font-size: 1.2em;
 }
 
 .secondary-cta {
-    background-color: #28a745; /* Hijau Sekunder */
+    background-color: var(--color-secondary);
 }
 
 .secondary-cta:hover {
-    background-color: #1e7e34;
+    background-color: #5b8744;
 }
 
-/* Header dan Navigasi */
+/* --- Header dan Navigasi --- */
 header {
     background-color: #fff;
-    color: #333;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--color-primary);
+    box-shadow: 0 1px 3px rgba(56, 118, 29, 0.2); 
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -63,8 +73,8 @@ header .container {
 
 header h1 {
     margin: 0;
-    color: #007BFF;
-    font-size: 1.8em;
+    color: var(--color-primary);
+    font-size: 2em;
 }
 
 nav ul {
@@ -81,18 +91,20 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #555;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #007BFF;
+    color: var(--color-primary);
 }
 
-/* Hero Section */
+
+/* --- Hero Section (Menggunakan Foto Anda: IMG_20251105_112559.jpg) --- */
 .hero-section {
-    background: url('hero-dummy-background.jpg') no-repeat center center/cover; /* Ganti dengan gambar sekolah */
-    height: 60vh;
+    /* MENGGUNAKAN FOTO PERTAMA */
+    background: url('IMG_20251105_112559.jpg') no-repeat center center/cover; 
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,28 +121,37 @@ nav ul li a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Overlay gelap */
+    background: rgba(0, 0, 0, 0.4); /* Overlay gelap agar teks terbaca */
+    z-index: 0; 
 }
 
 .hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 1; 
 }
 
 .hero-content h2 {
-    font-size: 3em;
+    font-size: 3.5em;
     margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .hero-content p {
-    font-size: 1.2em;
+    font-size: 1.3em;
+    font-weight: 300;
     margin-bottom: 30px;
 }
 
-/* Bagian Konten Umum */
+/* --- Bagian Konten Umum --- */
 section {
-    padding: 60px 0;
+    padding: 80px 0;
     text-align: center;
+}
+
+h3 {
+    color: var(--color-primary);
+    margin-bottom: 40px;
+    font-size: 2em;
 }
 
 /* Tentang Kami */
@@ -147,11 +168,12 @@ section {
 
 .about-item {
     flex: 1;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    padding: 25px;
+    background-color: var(--color-bg-section);
+    border-radius: 15px;
     text-align: left;
     transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .about-item:hover {
@@ -160,13 +182,13 @@ section {
 }
 
 .about-item h4 {
-    color: #007BFF;
+    color: var(--color-primary);
     margin-top: 0;
 }
 
 /* Program Section */
 .program-section {
-    background-color: #e9ecef;
+    background-color: var(--color-bg-section);
 }
 
 .program-section ul {
@@ -183,15 +205,16 @@ section {
     padding: 15px 25px;
     margin: 10px;
     border-radius: 25px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     font-weight: bold;
-    color: #333;
+    color: var(--color-primary);
+    border: 2px solid var(--color-secondary);
 }
 
 /* Galeri Section (CTA Sekunder) */
 .gallery-section {
-    background-color: #f8f9fa;
-    padding: 40px 0;
+    background-color: #fcfcfc;
+    padding: 60px 0;
 }
 
 /* Kontak/Formulir */
@@ -210,9 +233,9 @@ section {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-sizing: border-box; /* Penting untuk padding */
+    border: 1px solid var(--color-secondary);
+    border-radius: 8px;
+    box-sizing: border-box; 
 }
 
 .contact-section textarea {
@@ -226,13 +249,31 @@ section {
     cursor: pointer;
 }
 
-/* Footer */
+/* --- Footer (Menggunakan Foto Anda: IMG_20251105_112543.jpg) --- */
 footer {
-    background-color: #333;
+    /* MENGGUNAKAN FOTO KEDUA */
+    background: url('IMG_20251105_112543.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
     padding: 20px 0;
     font-size: 0.9em;
+    position: relative; 
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Overlay gelap agar teks footer terbaca */
+    z-index: 0; 
+}
+
+footer .container {
+    position: relative;
+    z-index: 1; /* Pastikan teks footer di atas overlay */
 }
 
 /* Media Queries untuk Responsif */
@@ -256,10 +297,12 @@ footer {
     }
 
     .hero-content h2 {
-        font-size: 2em;
+        font-size: 2.2em;
     }
 
     .about-grid {
         flex-direction: column;
     }
+}
+}
 }
