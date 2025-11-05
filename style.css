@@ -100,7 +100,7 @@ nav ul li a:hover {
 }
 
 
-/* --- HERO SECTION (LATAR BELAKANG FOTO) --- */
+/* --- Hero Section (Latar Belakang Foto Anda) --- */
 .hero-section {
     /* MENGGUNAKAN FOTO PERTAMA SEBAGAI LATAR */
     background: url('IMG_20251105_112543.jpg') no-repeat center center/cover; 
@@ -249,14 +249,16 @@ h3 {
     cursor: pointer;
 }
 
-/* --- FOOTER (WARNA SOLID) --- */
+/* --- Footer (DIKEMBALIKAN KE WARNA SOLID) --- */
 footer {
-    /* Warna solid tema alam (Tanpa Foto) */
+    /* Warna solid tema alam */
     background-color: var(--color-primary); 
     color: white;
     text-align: center;
     padding: 20px 0;
     font-size: 0.9em;
+    position: relative; 
+    /* Menghapus pseudo-element ::before yang sebelumnya digunakan untuk overlay gambar */
 }
 
 /* Media Queries untuk Responsif */
